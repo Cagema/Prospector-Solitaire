@@ -60,11 +60,11 @@ public class Layout : MonoBehaviour
             switch (tSD.type)
             {
                 case "slot":
-                    tSD.faceUp = slotsX[i].att("faceUp") == "1";
+                    tSD.faceUp = slotsX[i].att("faceup") == "1";
                     tSD.id = int.Parse(slotsX[i].att("id"));
-                    if (slotsX[i].HasAtt("hiddenBy"))
+                    if (slotsX[i].HasAtt("hiddenby"))
                     {
-                        string[] hiding = slotsX[i].att("hiddenBy").Split(',');
+                        string[] hiding = slotsX[i].att("hiddenby").Split(',');
                         foreach (string s in hiding)
                         {
                             tSD.hiddenBy.Add(int.Parse(s));
